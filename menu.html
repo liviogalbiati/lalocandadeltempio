@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Menù – La Locanda del Tempio, Roma</title>
+<meta name="description" content="Il menù de La Locanda del Tempio: antipasti, primi, pesce fresco, carne, contorni, dolci e vini pregiati. Con allergeni e filtri vegetariano, vegano e senza glutine.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="La Locanda del Tempio">
+<meta property="og:title" content="Menù – La Locanda del Tempio, Roma">
+<meta property="og:description" content="Il menù de La Locanda del Tempio: antipasti, primi, pesce fresco, carne, contorni, dolci e vini pregiati.">
+<meta property="og:locale" content="it_IT">
+<meta name="theme-color" content="#3A2418">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="menu">
+<header id="site-header"></header>
+<main>
+  <div class="page-head">
+    <div class="container">
+      <div class="arch-mini" data-arch aria-hidden="true"></div>
+      <h1 data-i18n="m.title">Il nostro menù</h1>
+      <p class="lead" data-i18n="m.lead">Cucina italiana tradizionale, pesce fresco e vini pregiati.</p>
+    </div>
+  </div>
+
+  <div class="container" style="padding-top:20px">
+    <p class="notice demo" role="note" data-i18n="m.banner">Menù dimostrativo: piatti, prezzi e allergeni da confermare con il ristorante.</p>
+  </div>
+
+  <div class="menu-tools">
+    <div class="container inner">
+      <nav class="chips" id="cat-nav" aria-label="Categorie" data-i18n-attr="aria-label:m.cats"></nav>
+      <div class="chips" role="group" aria-label="Filtri" data-i18n-attr="aria-label:m.filters">
+        <button type="button" data-filter="veg" aria-pressed="false" data-i18n="m.f.veg">Vegetariano</button>
+        <button type="button" data-filter="vegan" aria-pressed="false" data-i18n="m.f.vegan">Vegano</button>
+        <button type="button" data-filter="gf" aria-pressed="false" data-i18n="m.f.gf">Senza glutine</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" style="padding-bottom:40px">
+    <details class="box">
+      <summary data-i18n="m.legend">Legenda allergeni (14 allergeni UE)</summary>
+      <ul class="legend" id="legend"></ul>
+    </details>
+    <div id="menu-root"></div>
+    <p class="empty" id="menu-empty" data-i18n="m.empty">Nessun piatto corrisponde ai filtri scelti.</p>
+    <p class="notice" data-i18n="m.legal">Se hai allergie o intolleranze alimentari, comunicalo al personale prima di ordinare: i piatti possono contenere o venire a contatto con gli allergeni indicati dal Reg. UE 1169/2011 e con altre tracce. Le informazioni sugli allergeni sono disponibili su richiesta.</p>
+    <div class="btn-row" style="margin-top:24px">
+      <a class="btn btn-primary" href="prenota.html" data-i18n="h.cta1">Prenota un tavolo</a>
+      <a class="btn btn-ghost" href="asporto.html" data-i18n="m.takeaway">Ordina da asporto</a>
+    </div>
+  </div>
+</main>
+<footer id="site-footer"></footer>
+<nav id="action-bar"></nav>
+<script src="js/menu-data.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+<script src="js/dishes.js"></script>
+<script src="js/menu.js"></script>
+</body>
+</html>

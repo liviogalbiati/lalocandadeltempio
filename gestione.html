@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Area ristoratore (demo) – La Locanda del Tempio</title>
+<meta name="description" content="Dimostrazione dell'area riservata al ristoratore: prenotazioni del giorno, automatismi di messaggi, ordini da asporto, buoni venduti e modifica del menù.">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="La Locanda del Tempio">
+<meta property="og:title" content="Area ristoratore (demo) – La Locanda del Tempio">
+<meta property="og:description" content="Dimostrazione dell'area riservata al ristoratore.">
+<meta property="og:locale" content="it_IT">
+<meta name="theme-color" content="#3A2418">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="gestione">
+<header id="site-header"></header>
+<main>
+  <div class="page-head">
+    <div class="container">
+      <div class="arch-mini" data-arch aria-hidden="true"></div>
+      <h1 data-i18n="g.title">Area ristoratore (demo)</h1>
+      <p class="lead" data-i18n="g.lead">Ecco cosa ottiene il ristorante: tutto in un colpo d’occhio, senza fogli e telefonate.</p>
+    </div>
+  </div>
+
+  <div class="container" style="padding:28px 0 56px">
+    <p class="notice demo" role="note" data-i18n="g.banner"><strong>Dimostrazione.</strong> Nessun login reale: i dati qui sotto sono fittizi e le modifiche non vengono salvate.</p>
+
+    <!-- 1. Prenotazioni -->
+    <section style="padding:36px 0 0" aria-labelledby="g1">
+      <h2 id="g1" data-i18n="g.s1">Prenotazioni di oggi</h2>
+      <div class="grid g3" style="margin-bottom:18px">
+        <div class="card"><div class="stat">5</div><span data-i18n="g.stat.res">prenotazioni</span></div>
+        <div class="card"><div class="stat">26</div><span data-i18n="g.stat.cov">coperti</span></div>
+        <div class="card"><div class="stat">2</div><span data-i18n="g.stat.dep">con caparra o carta a garanzia</span></div>
+      </div>
+      <div class="tbl-wrap"><table class="tbl">
+        <caption class="sr-only" data-i18n="g.s1">Prenotazioni di oggi</caption>
+        <thead><tr><th scope="col" data-i18n="g.t.time">Ora</th><th scope="col" data-i18n="g.t.guest">Cliente</th><th scope="col" data-i18n="g.t.status">Stato</th><th scope="col" data-i18n="g.t.guarantee">Garanzia</th><th scope="col" data-i18n="g.t.notes">Note</th></tr></thead>
+        <tbody>
+          <tr><td>13:00</td><td>Rossi M., 4 pers.</td><td><span class="pill" data-i18n="g.st.conf">Confermata</span></td><td>—</td><td></td></tr>
+          <tr><td>13:30</td><td>Bianchi L., 2 pers.</td><td><span class="pill" data-i18n="g.st.arrived">Arrivato</span></td><td>—</td><td data-i18n="g.n.window">Tavolo vicino alla finestra</td></tr>
+          <tr><td>20:00</td><td>Verdi A., 8 pers.</td><td><span class="pill" data-i18n="g.st.conf">Confermata</span></td><td data-i18n="g.dep.paid">Caparra versata</td><td data-i18n="g.n.bday">Compleanno, torta</td></tr>
+          <tr><td>20:30</td><td>Esposito G., 2 pers.</td><td><span class="pill warn" data-i18n="g.st.wait">In attesa di conferma</span></td><td>—</td><td data-i18n="g.n.celiac">1 celiaco</td></tr>
+          <tr><td>21:00</td><td>Conti S., 10 pers.</td><td><span class="pill" data-i18n="g.st.conf">Confermata</span></td><td data-i18n="g.dep.card">Carta a garanzia</td><td></td></tr>
+        </tbody></table></div>
+      <p class="fine" style="margin-top:8px" data-i18n="g.fake">Nomi e dati inventati a scopo dimostrativo.</p>
+    </section>
+
+    <!-- 2. Automatismi -->
+    <section style="padding:44px 0 0" aria-labelledby="g2">
+      <h2 id="g2" data-i18n="g.s2">Messaggi automatici</h2>
+      <p class="lead" data-i18n="g.s2lead">Accendi o spegni ogni messaggio e modifica il testo: l’anteprima si aggiorna subito. Puoi usare {nome}, {data}, {ora}, {persone} e {link}.</p>
+      <div class="grid g3" id="auto-grid"></div>
+    </section>
+
+    <!-- 3. Asporto e buoni -->
+    <section style="padding:44px 0 0" aria-labelledby="g3">
+      <h2 id="g3" data-i18n="g.s3">Asporto e buoni regalo</h2>
+      <div class="grid g2">
+        <div>
+          <h3 data-i18n="g.takeaway">Ordini da asporto di oggi</h3>
+          <div class="tbl-wrap"><table class="tbl"><thead><tr><th scope="col" data-i18n="g.t.num">N.</th><th scope="col" data-i18n="g.t.pickup">Ritiro</th><th scope="col" data-i18n="g.t.guest">Cliente</th><th scope="col" data-i18n="g.t.status">Stato</th></tr></thead><tbody>
+            <tr><td>ASP-10231</td><td>12:45</td><td>Romano P.</td><td><span class="pill" data-i18n="g.st.ready">Pronto</span></td></tr>
+            <tr><td>ASP-10232</td><td>13:15</td><td>Greco A.</td><td><span class="pill warn" data-i18n="g.st.prep">In preparazione</span></td></tr>
+            <tr><td>ASP-10233</td><td>20:00</td><td>Marino C.</td><td><span class="pill off" data-i18n="g.st.new">Nuovo</span></td></tr></tbody></table></div>
+        </div>
+        <div>
+          <h3 data-i18n="g.vouchers">Buoni regalo venduti</h3>
+          <div class="tbl-wrap"><table class="tbl"><thead><tr><th scope="col" data-i18n="g.t.code">Codice</th><th scope="col" data-i18n="g.t.for">Per</th><th scope="col" data-i18n="g.t.send">Invio</th><th scope="col" data-i18n="g.t.status">Stato</th></tr></thead><tbody>
+            <tr><td>LDT-DEMO-0001</td><td>Ferri E.</td><td>Email</td><td><span class="pill" data-i18n="g.st.sent">Inviato</span></td></tr>
+            <tr><td>LDT-DEMO-0002</td><td>Longo R.</td><td data-i18n="g.t.printed">Stampa</td><td><span class="pill warn" data-i18n="g.st.sched">Programmato</span></td></tr>
+            <tr><td>LDT-DEMO-0003</td><td>Villa T.</td><td>Email</td><td><span class="pill off" data-i18n="g.st.redeemed">Utilizzato</span></td></tr></tbody></table></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Modifica piatto -->
+    <section style="padding:44px 0 0" aria-labelledby="g4">
+      <h2 id="g4" data-i18n="g.s4">Modifica un piatto del menù</h2>
+      <p class="lead" data-i18n="g.s4lead">Cambia nome, descrizione o prezzo: guarda subito come apparirà ai clienti. In produzione la modifica aggiorna sia il menù sia l’asporto.</p>
+      <div class="grid g2" style="align-items:start">
+        <div class="form-card">
+          <div class="field"><label for="ed-dish" data-i18n="g.ed.dish">Piatto</label><select id="ed-dish"></select></div>
+          <div class="field"><label for="ed-name" data-i18n="g.ed.name">Nome (italiano)</label><input id="ed-name" type="text"></div>
+          <div class="field"><label for="ed-desc" data-i18n="g.ed.desc">Descrizione (italiano)</label><input id="ed-desc" type="text"></div>
+          <div class="field"><label for="ed-price" data-i18n="g.ed.price">Prezzo</label><input id="ed-price" type="text" placeholder="18"></div>
+          <div class="check"><input type="checkbox" id="ed-veg"><label for="ed-veg" data-i18n="m.f.veg">Vegetariano</label></div>
+          <div class="check"><input type="checkbox" id="ed-gf"><label for="ed-gf" data-i18n="m.f.gf">Senza glutine</label></div>
+        </div>
+        <div>
+          <p class="eyebrow" data-i18n="v.preview">Anteprima</p>
+          <article class="dish" id="ed-preview" style="background:#F8F3E6;border:1px solid var(--line);border-radius:8px;padding:18px"></article>
+          <p class="fine" style="margin-top:8px" data-i18n="g.ed.note">Modifica dimostrativa: non viene salvata.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+<footer id="site-footer"></footer>
+<nav id="action-bar"></nav>
+<script src="js/menu-data.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+<script src="js/dishes.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

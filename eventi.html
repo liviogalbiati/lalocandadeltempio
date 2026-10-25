@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Eventi privati e gruppi – La Locanda del Tempio, Roma</title>
+<meta name="description" content="Compleanni, cene aziendali, comunioni, battesimi, lauree: organizza il tuo evento privato a La Locanda del Tempio, a due passi dal Pantheon, a Roma.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="La Locanda del Tempio">
+<meta property="og:title" content="Eventi privati e gruppi – La Locanda del Tempio, Roma">
+<meta property="og:description" content="Compleanni, cene aziendali, cerimonie e lauree nel cuore di Roma.">
+<meta property="og:locale" content="it_IT">
+<meta name="theme-color" content="#3A2418">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="eventi">
+<header id="site-header"></header>
+<main>
+  <div class="page-head">
+    <div class="container">
+      <div class="arch-mini" data-arch aria-hidden="true"></div>
+      <h1 data-i18n="e.title">Eventi privati e gruppi</h1>
+      <p class="lead" data-i18n="e.lead">Un’occasione speciale merita una tavola speciale. Raccontaci cosa festeggi: al resto pensiamo noi.</p>
+    </div>
+  </div>
+
+  <div class="container" style="padding:32px 0 56px">
+    <div class="split" style="align-items:start;margin-bottom:36px">
+      <div class="stack">
+        <p data-i18n="e.intro">Compleanni, cene aziendali, comunioni e cresime, battesimi, lauree: a La Locanda del Tempio trovi un ambiente elegante e accogliente, nel cuore di Roma, a pochi passi dal Pantheon.</p>
+        <p><strong data-i18n="e.cap">Capienza:</strong> <span class="ph" data-i18n="ph.seats">[DA INSERIRE: coperti]</span></p>
+        <p class="notice demo" role="note" data-i18n="e.demo">Flusso dimostrativo: la richiesta non viene inviata a nessuno.</p>
+      </div>
+      <div class="frame-arch" style="max-width:360px;margin-inline:auto;width:100%"><div data-photo="photo.event" style="--ar:4/5"></div></div>
+    </div>
+
+    <div id="ev-app">
+    <form class="form-card" id="ev-form" novalidate>
+      <fieldset>
+        <legend data-i18n="e.q.type">Che occasione festeggi?</legend>
+        <div class="opts" role="radiogroup" id="ev-types">
+          <label class="opt"><input type="radio" name="type" value="birthday"><span data-i18n="e.t.birthday">Compleanno</span></label>
+          <label class="opt"><input type="radio" name="type" value="corporate"><span data-i18n="e.t.corporate">Cena aziendale</span></label>
+          <label class="opt"><input type="radio" name="type" value="communion"><span data-i18n="e.t.communion">Comunione / Cresima</span></label>
+          <label class="opt"><input type="radio" name="type" value="baptism"><span data-i18n="e.t.baptism">Battesimo</span></label>
+          <label class="opt"><input type="radio" name="type" value="graduation"><span data-i18n="e.t.graduation">Laurea</span></label>
+          <label class="opt"><input type="radio" name="type" value="other"><span data-i18n="e.t.other">Altro</span></label>
+        </div>
+        <div class="err" id="e-type" role="alert"></div>
+      </fieldset>
+
+      <fieldset>
+        <legend data-i18n="e.q.when">Quando e quanti</legend>
+        <div class="row2">
+          <div class="field"><label for="ev-date" data-i18n="e.date">Data desiderata *</label><input id="ev-date" name="date" type="date"><div class="err" id="e-ev-date"></div></div>
+          <div class="field"><label for="ev-slot" data-i18n="e.slot">Fascia oraria *</label>
+            <select id="ev-slot" name="slot"><option value="" data-i18n="e.slot.choose">Scegli…</option><option value="lunch" data-i18n="e.slot.lunch">Pranzo</option><option value="afternoon" data-i18n="e.slot.afternoon">Pomeriggio</option><option value="dinner" data-i18n="e.slot.dinner">Cena</option></select><div class="err" id="e-ev-slot"></div></div>
+        </div>
+        <div class="row2">
+          <div class="field"><label for="ev-guests" data-i18n="e.guests">Numero di persone *</label><input id="ev-guests" name="guests" type="number" min="2" max="500" inputmode="numeric"><div class="err" id="e-ev-guests"></div></div>
+          <div class="field"><label for="ev-budget" data-i18n="e.budget">Budget a persona</label>
+            <select id="ev-budget" name="budget"><option value="" data-i18n="e.budget.tbd">Da definire</option><option value="a" data-i18n="e.budget.a">fino a € 40</option><option value="b">€ 40 – 60</option><option value="c">€ 60 – 80</option><option value="d" data-i18n="e.budget.d">oltre € 80</option></select></div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend data-i18n="e.q.format">Formula</legend>
+        <div class="field"><span class="lbl" data-i18n="e.menuType">Menù</span>
+          <div class="opts" role="radiogroup"><label class="opt"><input type="radio" name="menutype" value="fixed"><span data-i18n="e.menu.fixed">Menù fisso</span></label><label class="opt"><input type="radio" name="menutype" value="carte"><span data-i18n="e.menu.carte">Alla carta</span></label><label class="opt"><input type="radio" name="menutype" value="tbd" checked><span data-i18n="e.menu.tbd">Da decidere insieme</span></label></div></div>
+        <div class="field"><span class="lbl" data-i18n="e.exclusive">Uso esclusivo del locale</span>
+          <div class="opts" role="radiogroup"><label class="opt"><input type="radio" name="exclusive" value="yes"><span data-i18n="e.yes">Sì</span></label><label class="opt"><input type="radio" name="exclusive" value="no" checked><span data-i18n="e.no">No</span></label></div></div>
+        <div class="field"><span class="lbl" data-i18n="e.needs">Necessità particolari</span>
+          <div class="opts"><label class="opt"><input type="checkbox" name="needs" value="cake"><span data-i18n="e.n.cake">Torta</span></label><label class="opt"><input type="checkbox" name="needs" value="decor"><span data-i18n="e.n.decor">Allestimento</span></label><label class="opt"><input type="checkbox" name="needs" value="projector"><span data-i18n="e.n.projector">Proiettore</span></label></div></div>
+        <div class="field"><label for="ev-allergies" data-i18n="e.allergies">Esigenze alimentari e allergie</label><textarea id="ev-allergies" name="allergies"></textarea></div>
+      </fieldset>
+
+      <fieldset id="company-box" hidden>
+        <legend data-i18n="e.q.company">Dati aziendali</legend>
+        <div class="field"><label for="ev-company" data-i18n="e.company">Nome azienda *</label><input id="ev-company" name="company" type="text" autocomplete="organization"><div class="err" id="e-ev-company"></div></div>
+        <div class="check"><input type="checkbox" id="ev-invoice" name="invoice"><label for="ev-invoice" data-i18n="e.invoice">Ho bisogno della fattura</label></div>
+      </fieldset>
+
+      <fieldset>
+        <legend data-i18n="e.q.contact">I tuoi contatti</legend>
+        <div class="row2">
+          <div class="field"><label for="ev-name" data-i18n="b.name">Nome e cognome *</label><input id="ev-name" name="name" type="text" autocomplete="name"><div class="err" id="e-ev-name"></div></div>
+          <div class="field"><label for="ev-phone" data-i18n="b.phone">Telefono *</label><input id="ev-phone" name="phone" type="tel" autocomplete="tel"><div class="err" id="e-ev-phone"></div></div>
+        </div>
+        <div class="field"><label for="ev-email">Email *</label><input id="ev-email" name="email" type="email" autocomplete="email"><div class="err" id="e-ev-email"></div></div>
+        <div class="field"><span class="lbl" data-i18n="e.reply">Come preferisci essere ricontattato?</span>
+          <div class="opts" role="radiogroup"><label class="opt"><input type="radio" name="reply" value="phone"><span data-i18n="e.r.phone">Telefono</span></label><label class="opt"><input type="radio" name="reply" value="email" checked><span>Email</span></label><label class="opt"><input type="radio" name="reply" value="whatsapp"><span>WhatsApp</span></label></div></div>
+        <div class="field"><label for="ev-notes" data-i18n="e.notes">Altre informazioni</label><textarea id="ev-notes" name="notes"></textarea></div>
+        <div class="check"><input type="checkbox" id="ev-consent" name="consent"><label for="ev-consent"><span data-i18n="b.consent">Ho letto l’informativa e acconsento al trattamento dei miei dati per essere ricontattato.</span> <a href="privacy.html" target="_blank" rel="noopener" data-i18n="b.privacy">Informativa privacy</a> *</label></div>
+        <div class="err" id="e-ev-consent"></div>
+      </fieldset>
+      <button type="submit" class="btn btn-primary" data-i18n="e.send">Invia la richiesta</button>
+    </form>
+    </div>
+  </div>
+</main>
+<footer id="site-footer"></footer>
+<nav id="action-bar"></nav>
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+<script src="js/events.js"></script>
+</body>
+</html>
